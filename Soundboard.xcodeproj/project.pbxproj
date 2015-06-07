@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		580772B21B23F6F000378273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772B11B23F6F000378273 /* AppDelegate.swift */; };
 		580772B51B23F6F000378273 /* Soundboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 580772B31B23F6F000378273 /* Soundboard.xcdatamodeld */; };
-		580772B71B23F6F000378273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772B61B23F6F000378273 /* ViewController.swift */; };
+		580772B71B23F6F000378273 /* SoundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772B61B23F6F000378273 /* SoundListViewController.swift */; };
 		580772BA1B23F6F000378273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580772B81B23F6F000378273 /* Main.storyboard */; };
 		580772BC1B23F6F000378273 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580772BB1B23F6F000378273 /* Images.xcassets */; };
 		580772BF1B23F6F000378273 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580772BD1B23F6F000378273 /* LaunchScreen.xib */; };
@@ -31,7 +31,7 @@
 		580772B01B23F6F000378273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580772B11B23F6F000378273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		580772B41B23F6F000378273 /* Soundboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Soundboard.xcdatamodel; sourceTree = "<group>"; };
-		580772B61B23F6F000378273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		580772B61B23F6F000378273 /* SoundListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundListViewController.swift; sourceTree = "<group>"; };
 		580772B91B23F6F000378273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		580772BB1B23F6F000378273 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		580772BE1B23F6F000378273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				580772B11B23F6F000378273 /* AppDelegate.swift */,
-				580772B61B23F6F000378273 /* ViewController.swift */,
+				580772B61B23F6F000378273 /* SoundListViewController.swift */,
 				580772B81B23F6F000378273 /* Main.storyboard */,
 				580772BB1B23F6F000378273 /* Images.xcassets */,
 				580772BD1B23F6F000378273 /* LaunchScreen.xib */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				580772B71B23F6F000378273 /* ViewController.swift in Sources */,
+				580772B71B23F6F000378273 /* SoundListViewController.swift in Sources */,
 				580772B51B23F6F000378273 /* Soundboard.xcdatamodeld in Sources */,
 				580772B21B23F6F000378273 /* AppDelegate.swift in Sources */,
 			);
