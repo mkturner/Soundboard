@@ -13,35 +13,54 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
+    // instantiate AVAudioPlayer for later use
     var audioPlayer = AVAudioPlayer()
+    
+    // array to hold al the sounds
+    var sounds: [Sound] = []
+    
+    func findURL (name: String, ofType: String) -> NSURL {
+        // find location of playable media
+        var filePath = NSBundle.mainBundle().pathForResource(name, ofType: ofType)
+        // convert location info into usable URL
+        var fileURL = NSURL.fileURLWithPath(filePath!)
+        // send URL back to calling scope
+        return fileURL!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        // append a sound to 'sounds' array for test
+        var newSound = Sound()
+        newSound.name = "'BRUH' impression"
+        newSound.sound = findURL("bruh", ofType: "m4a")
+        self.sounds.append(newSound)
     }
     
     // tells tableView how many rows to have
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        // make a cell for each item in the array
+        return self.sounds.count
     }
     
     // tells tableView what's in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var currentSound = self.sounds[indexPath.row]
         // create row object (cell)
         var cell = UITableViewCell()
         // assign value to cell
-        cell.textLabel!.text = "BRUH"
+        cell.textLabel!.text = currentSound.name
         // send cell back to view
         return cell
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // find location of playable media
-        var soundPath = NSBundle.mainBundle().pathForResource("bruh", ofType: "m4a")
-        // convert location info into usable URL
-        var soundURL = NSURL.fileURLWithPath(soundPath!)
+        // find location of playable media & return info as usable URL
+        var soundURL = findURL("bruh", ofType: "m4a")
         // assign URL to audio player
         self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
         // Play file at the assigned URL

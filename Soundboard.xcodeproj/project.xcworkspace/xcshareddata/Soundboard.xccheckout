@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA5FFEAE-6A8F-466A-A2BE-7A33F30E0EEE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B144A22D5E20CA2FEF68F6296CE8E5B82BDC31F1</key>
+		<string>github.com:mkturner/Soundboard.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Soundboard.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B144A22D5E20CA2FEF68F6296CE8E5B82BDC31F1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:mkturner/Soundboard.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B144A22D5E20CA2FEF68F6296CE8E5B82BDC31F1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B144A22D5E20CA2FEF68F6296CE8E5B82BDC31F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Soundboard</string>
+		</dict>
+	</array>
+</dict>
+</plist>
