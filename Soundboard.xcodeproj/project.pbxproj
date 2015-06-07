@@ -14,6 +14,7 @@
 		580772BC1B23F6F000378273 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580772BB1B23F6F000378273 /* Images.xcassets */; };
 		580772BF1B23F6F000378273 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580772BD1B23F6F000378273 /* LaunchScreen.xib */; };
 		580772CB1B23F6F000378273 /* SoundboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772CA1B23F6F000378273 /* SoundboardTests.swift */; };
+		580772D51B24A2B300378273 /* bruh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 580772D41B24A2B300378273 /* bruh.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		580772C41B23F6F000378273 /* SoundboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		580772C91B23F6F000378273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580772CA1B23F6F000378273 /* SoundboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardTests.swift; sourceTree = "<group>"; };
+		580772D41B24A2B300378273 /* bruh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bruh.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		580772AE1B23F6F000378273 /* Soundboard */ = {
 			isa = PBXGroup;
 			children = (
+				580772D41B24A2B300378273 /* bruh.m4a */,
 				580772B11B23F6F000378273 /* AppDelegate.swift */,
 				580772B61B23F6F000378273 /* SoundListViewController.swift */,
 				580772B81B23F6F000378273 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				580772BA1B23F6F000378273 /* Main.storyboard in Resources */,
+				580772D51B24A2B300378273 /* bruh.m4a in Resources */,
 				580772BF1B23F6F000378273 /* LaunchScreen.xib in Resources */,
 				580772BC1B23F6F000378273 /* Images.xcassets in Resources */,
 			);
