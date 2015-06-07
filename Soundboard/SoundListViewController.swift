@@ -41,6 +41,10 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         self.sounds.append(newSound)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     // tells tableView how many rows to have
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // make a cell for each item in the array
@@ -65,6 +69,11 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
         // Play file at the assigned URL
         self.audioPlayer.play()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var nextViewControler = segue.destinationViewController as! NewSoundViewController
+        nextViewControler.previousViewController = self
     }
     
 }

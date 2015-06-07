@@ -16,6 +16,7 @@
 		580772CB1B23F6F000378273 /* SoundboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772CA1B23F6F000378273 /* SoundboardTests.swift */; };
 		580772D51B24A2B300378273 /* bruh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 580772D41B24A2B300378273 /* bruh.m4a */; };
 		580772D71B24A8BD00378273 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772D61B24A8BD00378273 /* Sound.swift */; };
+		580772D91B24E13400378273 /* NewSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772D81B24E13400378273 /* NewSoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		580772CA1B23F6F000378273 /* SoundboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardTests.swift; sourceTree = "<group>"; };
 		580772D41B24A2B300378273 /* bruh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bruh.m4a; sourceTree = "<group>"; };
 		580772D61B24A8BD00378273 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		580772D81B24E13400378273 /* NewSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +88,13 @@
 				580772D41B24A2B300378273 /* bruh.m4a */,
 				580772B11B23F6F000378273 /* AppDelegate.swift */,
 				580772B61B23F6F000378273 /* SoundListViewController.swift */,
+				580772D61B24A8BD00378273 /* Sound.swift */,
+				580772D81B24E13400378273 /* NewSoundViewController.swift */,
 				580772B81B23F6F000378273 /* Main.storyboard */,
 				580772BB1B23F6F000378273 /* Images.xcassets */,
 				580772BD1B23F6F000378273 /* LaunchScreen.xib */,
 				580772B31B23F6F000378273 /* Soundboard.xcdatamodeld */,
 				580772AF1B23F6F000378273 /* Supporting Files */,
-				580772D61B24A8BD00378273 /* Sound.swift */,
 			);
 			path = Soundboard;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				580772B51B23F6F000378273 /* Soundboard.xcdatamodeld in Sources */,
 				580772B21B23F6F000378273 /* AppDelegate.swift in Sources */,
 				580772D71B24A8BD00378273 /* Sound.swift in Sources */,
+				580772D91B24E13400378273 /* NewSoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
