@@ -16,7 +16,7 @@
 		580772D51B24A2B300378273 /* bruh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 580772D41B24A2B300378273 /* bruh.m4a */; };
 		580772D91B24E13400378273 /* NewSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772D81B24E13400378273 /* NewSoundViewController.swift */; };
 		580772DD1B26928800378273 /* Soundboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 580772DB1B26928800378273 /* Soundboard.xcdatamodeld */; };
-		580772DF1B26938000378273 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772DE1B26938000378273 /* Sound.swift */; };
+		580772E31B26962C00378273 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580772E21B26962C00378273 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		580772D41B24A2B300378273 /* bruh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bruh.m4a; sourceTree = "<group>"; };
 		580772D81B24E13400378273 /* NewSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSoundViewController.swift; sourceTree = "<group>"; };
 		580772DC1B26928800378273 /* Soundboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Soundboard.xcdatamodel; sourceTree = "<group>"; };
-		580772DE1B26938000378273 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		580772E21B26962C00378273 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		580772AE1B23F6F000378273 /* Soundboard */ = {
 			isa = PBXGroup;
 			children = (
-				580772DE1B26938000378273 /* Sound.swift */,
+				580772E21B26962C00378273 /* Sound.swift */,
 				580772D41B24A2B300378273 /* bruh.m4a */,
 				580772B11B23F6F000378273 /* AppDelegate.swift */,
 				580772B61B23F6F000378273 /* SoundListViewController.swift */,
@@ -225,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				580772DF1B26938000378273 /* Sound.swift in Sources */,
+				580772E31B26962C00378273 /* Sound.swift in Sources */,
 				580772B71B23F6F000378273 /* SoundListViewController.swift in Sources */,
 				580772B21B23F6F000378273 /* AppDelegate.swift in Sources */,
 				580772DD1B26928800378273 /* Soundboard.xcdatamodeld in Sources */,

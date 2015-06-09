@@ -55,7 +55,7 @@ class NewSoundViewController: UIViewController {
         // create a sound
         var newSound = Sound()
         newSound.name = self.soundNameField.text!
-        newSound.URL = self.audioURL
+//        newSound.URL = self.audioURL
         
         // add sound to sounds array
         self.previousViewController.sounds.append(newSound)
