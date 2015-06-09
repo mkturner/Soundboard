@@ -8,11 +8,37 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class NewSoundViewController: UIViewController {
     
-    @IBOutlet weak var soundNameField: UITextField!
+    required init(coder aDecoder: NSCoder){
+        var baseString: String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
+        var pathComponents = [baseString, "MyAudio.m4a"]
+        var audioURL = NSURL.fileURLWithPathComponents(pathComponents)
+        
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+        
+        var recordSettings: [NSObject: AnyObject] = Dictionary()
+        recordSettings[AVFormatIDKey] = kAudioFormatMPEG4AAC
+        recordSettings[AVSampleRateKey] = 44100.0
+        recordSettings[AVNumberOfChannelsKey] = 2
+        
+        self.audioRecorder = AVAudioRecorder(URL: audioURL, settings: recordSettings, error: nil)
+        self.audioRecorder.meteringEnabled = true
+        self.audioRecorder.prepareToRecord()
+        
+        // super.init is below
+        super.init(coder: aDecoder)
+    }
     
+    @IBOutlet weak var soundNameField: UITextField!
+    @IBOutlet weak var recordButton: UIButton!
+    
+    
+    
+    var audioRecorder: AVAudioRecorder
     var previousViewController = SoundListViewController()
     
     override func viewDidLoad() {
@@ -38,4 +64,7 @@ class NewSoundViewController: UIViewController {
         
     }
     
+    @IBAction func recordTapped(sender: AnyObject) {
+        self.recordButton.setTitle("Finish Recording", forState: UIControlState.Normal)
+    }
 }
