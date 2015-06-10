@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import CoreData
 
 class NewSoundViewController: UIViewController {
     
@@ -52,13 +53,15 @@ class NewSoundViewController: UIViewController {
     
     @IBAction func saveTapped(sender: UIBarButtonItem) {
         // TODO: Hook up to new controller
-        // create a sound
-        var newSound = Sound()
+        // create a context, make sound, save sound
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        var newSound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
         newSound.name = self.soundNameField.text!
-//        newSound.URL = self.audioURL
+        newSound.url = self.audioURL.absoluteString!
         
-        // add sound to sounds array
-        self.previousViewController.sounds.append(newSound)
+        //save sound
+        context.save(nil)
+        
         
         //dismiss view controller
         self.dismissViewControllerAnimated(true, completion: nil)

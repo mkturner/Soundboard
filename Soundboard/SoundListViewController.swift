@@ -83,9 +83,9 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // find location of playable media & return info as usable URL
-//        var soundURL = self.sounds[indexPath.row].URL
+        var soundURL = NSURL(string: self.sounds[indexPath.row])
         // assign URL to audio player
-//        self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
         // Play file at the assigned URL
         self.audioPlayer.play()
     }
