@@ -34,33 +34,20 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-        // append a sound to 'sounds' array for test
-//        var newSound = Sound()
-//        newSound.name = "'BRUH' impression"
-//        newSound.URL = findURL("bruh", ofType: "m4a")
-//        self.sounds.append(newSound)
-        
-        // find context of application/app delegate for Core Data
-        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
-        // create new Core Data object
-        var newSound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
-        // add properties to created Core Data object
-        newSound.name = "'BRUH' impression"
-        newSound.url = findURL("bruh", ofType: "m4a").absoluteString!
-        
-        // save object to CoreData
-        context.save(nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // proceed 
         
         // get all records from core data
         //------
+        // find context of application/app delegate for Core Data
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
         // make a request for sound objects
         var request = NSFetchRequest(entityName: "Sound")
         // use request to pull objects into sounds array
         self.sounds = context.executeFetchRequest(request, error: nil) as! [Sound]
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
     
@@ -83,7 +70,7 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // find location of playable media & return info as usable URL
-        var soundURL = NSURL(string: self.sounds[indexPath.row])
+        var soundURL = NSURL(string: self.sounds[indexPath.row].url)
         // assign URL to audio player
         self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
         // Play file at the assigned URL

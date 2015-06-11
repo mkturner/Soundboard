@@ -15,8 +15,9 @@ class NewSoundViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder){
         var baseString: String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-        var pathComponents = [baseString, "MyAudio.m4a"]
-        self.audioURL = NSURL.fileURLWithPathComponents(pathComponents)!
+        self.audioURL = NSUUID().UUIDString + ".m4a"
+        var pathComponents = [baseString, self.audioURL]
+        var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)!
         
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
@@ -26,7 +27,7 @@ class NewSoundViewController: UIViewController {
         recordSettings[AVSampleRateKey] = 44100.0
         recordSettings[AVNumberOfChannelsKey] = 2
         
-        self.audioRecorder = AVAudioRecorder(URL: self.audioURL, settings: recordSettings, error: nil)
+        self.audioRecorder = AVAudioRecorder(URL: audioNSURL, settings: recordSettings, error: nil)
         self.audioRecorder.meteringEnabled = true
         self.audioRecorder.prepareToRecord()
         
@@ -39,7 +40,7 @@ class NewSoundViewController: UIViewController {
     
 
     var audioRecorder: AVAudioRecorder
-    var audioURL: NSURL
+    var audioURL: String
     var previousViewController = SoundListViewController()
     
     override func viewDidLoad() {
@@ -57,7 +58,7 @@ class NewSoundViewController: UIViewController {
         var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
         var newSound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
         newSound.name = self.soundNameField.text!
-        newSound.url = self.audioURL.absoluteString!
+        newSound.url = self.audioURL
         
         //save sound
         context.save(nil)
